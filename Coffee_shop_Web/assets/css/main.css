@@ -23,7 +23,7 @@ html::-webkit-scrollbar-track {
   background: transparent;
 }
 html::-webkit-scrollbar-thumb {
-  background: rgba(95, 46, 6, 0.9);
+  background: rgba(143, 64, 0, 0.911);
 }
 
 @-webkit-keyframes fadeIn {
@@ -39,23 +39,48 @@ html::-webkit-scrollbar-thumb {
     opacity: 0;
   }
 }
+@-webkit-keyframes figgker {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+@keyframes figgker {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
 section {
   padding: 5rem 1rem;
 }
 
 .link-btn {
-  border: 1px solid rgba(95, 46, 6, 0.9);
+  border: 1px solid rgba(143, 64, 0, 0.911);
   margin-top: 1rem;
   padding: 1rem 3rem;
   display: inline-block;
-  color: rgba(95, 46, 6, 0.9);
+  color: rgba(143, 64, 0, 0.911);
   background: none;
   cursor: pointer;
   font-size: 1.7rem;
+  box-shadow: inset 0 0 0 0 rgba(143, 64, 0, 0.911);
+  transition: ease-out 0.5s;
 }
 .link-btn:hover {
-  background: rgba(95, 46, 6, 0.9);
+  background: rgba(143, 64, 0, 0.911);
   color: #fff;
+  box-shadow: inset 300px 0 0 0 rgba(143, 64, 0, 0.911);
 }
 
 .heading {
@@ -72,7 +97,7 @@ section {
 }
 .header.active {
   padding: 2rem 0;
-  background: rgba(95, 46, 6, 0.9);
+  background: rgba(143, 64, 0, 0.911);
 }
 .header .logo {
   font-size: 2rem;
@@ -87,6 +112,11 @@ section {
 .header .nav a:hover {
   text-decoration: underline !important;
   text-underline-offset: 0.5rem;
+}
+.header .icon-btn:hover {
+  color: rgb(248, 230, 194);
+  border-bottom: 0.1rem solid whitesmoke;
+  padding-bottom: 0.5rem;
 }
 .header .icon div {
   font-size: 2.5rem;
@@ -122,6 +152,8 @@ section {
   position: relative;
   -webkit-animation: fadeIn 0.2s linear;
           animation: fadeIn 0.2s linear;
+  border: 1px solid rgba(143, 64, 0, 0.911);
+  border-radius: 10%;
 }
 .login-form form #close-login-form {
   position: absolute;
@@ -136,7 +168,7 @@ section {
 }
 .login-form form .logo {
   font-size: 2.5rem;
-  color: rgba(95, 46, 6, 0.9);
+  color: rgba(143, 64, 0, 0.911);
   font-weight: bolder;
 }
 .login-form form h3 {
@@ -149,7 +181,7 @@ section {
 .login-form form .box {
   width: 100%;
   padding: 1.2rem 1.4rem;
-  border: 1px solid rgba(95, 46, 6, 0.9);
+  border: 1px solid rgba(143, 64, 0, 0.911);
   font-size: 1.6rem;
   margin: 1rem 0;
 }
@@ -168,7 +200,7 @@ section {
 }
 .login-form form .flex a {
   font-size: 1.5rem;
-  color: rgba(95, 46, 6, 0.9);
+  color: rgba(143, 64, 0, 0.911);
   margin-left: auto;
 }
 .login-form form .flex a:hover {
@@ -187,7 +219,7 @@ section {
   margin-bottom: 0;
 }
 .login-form form .account a {
-  color: rgba(95, 46, 6, 0.9);
+  color: rgba(143, 64, 0, 0.911);
 }
 .login-form form .account a:hover {
   text-decoration: underline !important;
@@ -208,14 +240,22 @@ section {
   font-size: 6rem;
   color: #fff;
 }
-.home .link-btn {
+.home .first-btn {
   color: #fff;
   border-color: #fff;
+  transition: all 500ms ease-in-out;
+  -webkit-animation: figgker 2s ease infinite;
+          animation: figgker 2s ease infinite;
+  transition: ease-out 0.5s;
+  box-shadow: inset 0 0 0 0 rgba(143, 64, 0, 0.911);
+}
+.home .first-btn:hover {
+  box-shadow: inset 300px 0 0 0 rgba(143, 64, 0, 0.911);
 }
 
 .about span {
   font-size: 2.5rem;
-  color: rgba(95, 46, 6, 0.9);
+  color: rgba(143, 64, 0, 0.911);
 }
 .about .title {
   padding-top: 1rem;
@@ -245,7 +285,7 @@ section {
 .about .icons-container .icons i {
   font-size: 4rem;
   margin-bottom: 1.5rem;
-  color: rgba(95, 46, 6, 0.9);
+  color: rgba(143, 64, 0, 0.911);
 }
 .about .icons-container .icons h3 {
   font-size: 1.5rem;
@@ -300,7 +340,7 @@ section {
 }
 .gallery .box-container .box:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(95, 46, 6, 0.9);
+  border: 1px solid rgba(143, 64, 0, 0.911);
 }
 .gallery .box-container .box:hover img {
   transform: translateY(-100%);
@@ -379,7 +419,7 @@ section {
 }
 .reviews .box-container .box .stars i {
   font-size: 1.8rem;
-  color: rgba(95, 46, 6, 0.9);
+  color: rgba(143, 64, 0, 0.911);
 }
 
 .contact .contact-info-container {
@@ -390,19 +430,19 @@ section {
 }
 .contact .contact-info-container .box {
   padding: 3rem 2rem;
-  border: 1px solid rgba(95, 46, 6, 0.9);
+  border: 1px solid rgba(143, 64, 0, 0.911);
   text-align: center;
 }
 .contact .contact-info-container .box:hover i {
-  background: rgba(95, 46, 6, 0.9);
+  background: rgba(143, 64, 0, 0.911);
   color: #fff;
 }
 .contact .contact-info-container .box i {
   height: 6rem;
   width: 6rem;
   line-height: 6rem;
-  border: 1px solid rgba(95, 46, 6, 0.9);
-  color: rgba(95, 46, 6, 0.9);
+  border: 1px solid rgba(143, 64, 0, 0.911);
+  color: rgba(143, 64, 0, 0.911);
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -425,13 +465,13 @@ section {
 }
 .contact form .box {
   margin: 1rem 0;
-  border: 1px solid rgba(95, 46, 6, 0.9);
+  border: 1px solid rgba(143, 64, 0, 0.911);
   font-size: 1.6rem;
   width: 100%;
   padding: 1.2rem 1.4rem;
 }
 .contact form .box:focus {
-  background: rgba(95, 46, 6, 0.9);
+  background: rgba(143, 64, 0, 0.911);
   color: #fff;
 }
 .contact form .box:focus::-moz-placeholder {
@@ -464,7 +504,7 @@ section {
   padding: 2rem;
 }
 .blogs .box-container .box:hover .icons {
-  border-top: 1px solid rgba(95, 46, 6, 0.9);
+  border-top: 1px solid rgba(143, 64, 0, 0.911);
 }
 .blogs .box-container .box .image {
   height: 25rem;
@@ -507,7 +547,7 @@ section {
 }
 .blogs .box-container .box .icons span i {
   padding-right: 0.5rem;
-  color: rgba(95, 46, 6, 0.9);
+  color: rgba(143, 64, 0, 0.911);
 }
 
 .newsletter {
@@ -548,7 +588,7 @@ section {
 }
 .footer .logo {
   font-size: 2.5rem;
-  color: rgba(95, 46, 6, 0.9);
+  color: rgba(143, 64, 0, 0.911);
   font-weight: bolder;
 }
 .footer .credit {
@@ -568,43 +608,13 @@ section {
   width: 5rem;
   line-height: 5rem;
   font-size: 2rem;
-  border: 1px solid rgba(95, 46, 6, 0.9);
-  color: rgba(95, 46, 6, 0.9);
+  border: 1px solid rgba(143, 64, 0, 0.911);
+  color: rgba(143, 64, 0, 0.911);
   margin: 0 0.3rem;
 }
 .footer .share a:hover {
-  background: rgba(95, 46, 6, 0.9);
+  background: rgba(143, 64, 0, 0.911);
   color: #fff;
-}
-
-.banner {
-  padding: 0;
-  position: relative;
-}
-.banner .banner-img img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100vh;
-}
-.banner .banner-text {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 10%;
-  color: #fff;
-}
-.banner .banner-text span {
-  font-size: 2.5rem;
-  color: #fff;
-}
-.banner .banner-text h3 {
-  padding: 1rem 0;
-  font-size: 6rem;
-  color: #fff;
-}
-.banner .banner-text .link-btn {
-  color: #fff;
-  border-color: #fff;
 }
 
 @media (max-width: 991px) {

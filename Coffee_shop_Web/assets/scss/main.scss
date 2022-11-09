@@ -9,12 +9,13 @@
     transition: all .2s linear;
 }
 
-$main-color: rgba(95, 46, 6, 0.9);
+$main-color: rgba(143, 64, 0, 0.911);
 $black: rgb(24, 20, 20);
 $white: #fff;
 $light-color: rgb(129, 127, 127);
 $light-bg: #eee;
 $border: 1px solid $main-color;
+$border-radius: 10%;
 $box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 
 @mixin gird ($val){
@@ -60,6 +61,20 @@ html {
     }
 }
 
+@keyframes figgker {
+    0% {
+        scale: 1;
+    }
+
+    50% {
+        scale: 1.2;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
 
 section {
     padding: 5rem 1rem;
@@ -73,9 +88,12 @@ section {
     background: none;
     cursor: pointer;
     font-size: 1.7rem;
+    box-shadow: inset 0 0 0 0 $main-color;
+    transition: ease-out 0.5s;
     &:hover {
         background: $main-color;
         color: $white;
+        box-shadow: inset 300px 0 0 0 $main-color;
     }
 }
 
@@ -110,7 +128,15 @@ section {
             &:hover {
                 text-decoration: underline !important;
                 text-underline-offset: .5rem;
+                
             }
+        }
+    }
+    .icon-btn {
+        &:hover {
+            color: rgb(248, 230, 194);
+            border-bottom: .1rem solid whitesmoke;
+            padding-bottom: .5rem;
         }
     }
     .icon div {
@@ -146,6 +172,8 @@ section {
         text-align: center;
         position: relative;
         animation: fadeIn .2s linear;
+        border: $border;
+        border-radius: $border-radius;
 
         #close-login-form {
             position:absolute;
@@ -232,9 +260,17 @@ section {
         font-size: 6rem;
         color: $white;
     }
-    .link-btn {
+    .first-btn {
         color: $white;
         border-color: $white;
+        transition: all 500ms ease-in-out;
+        animation: figgker 2s ease infinite;
+        transition: ease-out 0.5s;
+        box-shadow: inset 0 0 0 0  $main-color;
+
+        &:hover {
+            box-shadow: inset 300px 0 0 0  $main-color;
+        }
 
     }
 }
