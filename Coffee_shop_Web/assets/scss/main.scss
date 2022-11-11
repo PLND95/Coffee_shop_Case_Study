@@ -453,9 +453,11 @@ section {
             text-align: center;
 
             
-            &:hover i {
-                background: $main-color;
+            &:hover {
+                box-shadow: $box-shadow;
                 color: $white; 
+                border-radius: $border-radius;
+                cursor: pointer;
             }
 
             i {

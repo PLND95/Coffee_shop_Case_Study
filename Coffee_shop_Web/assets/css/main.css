@@ -433,9 +433,11 @@ section {
   border: 1px solid rgba(143, 64, 0, 0.911);
   text-align: center;
 }
-.contact .contact-info-container .box:hover i {
-  background: rgba(143, 64, 0, 0.911);
+.contact .contact-info-container .box:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   color: #fff;
+  border-radius: 10%;
+  cursor: pointer;
 }
 .contact .contact-info-container .box i {
   height: 6rem;
